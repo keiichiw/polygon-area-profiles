@@ -1,4 +1,5 @@
 # Polygon area profiles
+[![DOI](https://zenodo.org/badge/1420863632.svg)](https://doi.org/10.5281/zenodo.23399092)
 
 Verification code and reproducibility data for *Rational Area Profiles of Regular
 Polygons Cut by Two Congruent Diagonals*, by Shoichi Inoue and Keiichi Watanabe.
