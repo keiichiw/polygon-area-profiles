@@ -1,0 +1,16 @@
+{
+  "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+  "checks": {
+    "payload_sha256": "PASS",
+    "verify_exact_recorded_json": "PASS",
+    "verify_myerson_recorded_text": "PASS",
+    "verify_geometry_recorded_json": "PASS",
+    "optimization_guard": "PASS: -O rejected",
+    "optional_manuscript_comparison": "PASS: local private manuscript; altered table rejected"
+  },
+  "not_checked": [
+    "Python 3.9 runtime",
+    "Optional source-PDF transcription check"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "decimal_precision": 60,
+  "n_range": [
+    5,
+    80
+  ],
+  "absolute_tolerance": "1E-50",
+  "counts": {
+    "configurations": 19760,
+    "a0": 5,
+    "a2": 39,
+    "a1": 2,
+    "adjacent": 743
+  },
+  "maximum_absolute_errors": {
+    "area_formulas": "1.8E-59",
+    "sum_one": "5E-60",
+    "lateral_symmetry": "1.3E-59",
+    "T_parameterizations": "3.0E-58",
+    "classified_values": "8E-60",
+    "E2_reflection": "7.8E-59"
+  },
+  "minimum_nonmember_distance_from_theorem_values": {
+    "R": "0.00012075906856325625756122771727300460680020744966311251882",
+    "S": "0.000686447674253378831408821061258337245639761015609367572122",
+    "T": "0.000082784669041526185633678591296313076202373357903510855222",
+    "U": "0.0061653325337440476044531825159111596821462368103122156104"
+  },
+  "scope": "Numerical consistency only; no irrationality claim or proof by numerical search."
+}

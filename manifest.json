@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source_manuscript_commit": "2e7dd580761ea150996e8fd577d80074e5e69153",
+  "release": null,
+  "license_status": "MIT for Python code and software documentation; see README.md for scope",
+  "citation_status": "confirmed: sole software author Keiichi Watanabe; paper authors Shoichi Inoue and Keiichi Watanabe",
+  "source_files": {
+    "supplementary/README.md": {
+      "source_path": "supplementary/README.md",
+      "source_sha256": "ca1733969fee8fcf6b7fb07bf088a924d1c2178de2d0998555bae4c3fa11b225"
+    },
+    "supplementary/exact-results.json": {
+      "source_path": "supplementary/exact-results.json",
+      "source_sha256": "2061c85ebd78468115bd855f2eb5ec6d43538e5147a7f00371bab5d0bf32ebdf"
+    },
+    "supplementary/myerson-results.txt": {
+      "source_path": "supplementary/myerson-results.txt",
+      "source_sha256": "ecd0990822e5788ad1ada08676b5ce27ed07ed9c176c9fd0268ea556631f9826"
+    },
+    "supplementary/numerical-results.json": {
+      "source_path": "supplementary/numerical-results.json",
+      "source_sha256": "e44459e25c7ff7b390d85a36f23a6bc00b68d6790943153189ef722f074807d4"
+    },
+    "supplementary/pr-table4.csv": {
+      "source_path": "supplementary/pr-table4.csv",
+      "source_sha256": "c93055636453562eab85fb69e267b82400a0e25964a7205c4e9e7247621d5c0f"
+    },
+    "supplementary/verify_exact.py": {
+      "source_path": "supplementary/verify_exact.py",
+      "source_sha256": "9dc96cab092853698c66b7df9505a7983d98d84cc53a0bcbe0e66547f7bb5b38"
+    },
+    "supplementary/verify_geometry.py": {
+      "source_path": "supplementary/verify_geometry.py",
+      "source_sha256": "71b6f8dfd263931586b29511311ea4df64b897ccfba8587129ed18c9d6feb775"
+    },
+    "supplementary/verify_myerson.py": {
+      "source_path": "supplementary/verify_myerson.py",
+      "source_sha256": "1f906a216759df6e169929ed17f841aa563ca5ebe3ebe852aedc4bcd54bbd263"
+    },
+    "supplementary/verify_source.py": {
+      "source_path": "supplementary/verify_source.py",
+      "source_sha256": "870bd3f73d4ddabfb1bd8fcc70b8685abed332b0a11fef85972f86963add4c32"
+    }
+  },
+  "payload_sha256": {
+    "supplementary/README.md": "a162a3fe5b810216d637a3f3acf5582f6401e6ca1dc86453ff503c72d3eba218",
+    "supplementary/exact-results.json": "2061c85ebd78468115bd855f2eb5ec6d43538e5147a7f00371bab5d0bf32ebdf",
+    "supplementary/myerson-results.txt": "68ebb82b65934f73249f35c8636c6d9bb7e10283109d57778661e187d70690b0",
+    "supplementary/numerical-results.json": "e44459e25c7ff7b390d85a36f23a6bc00b68d6790943153189ef722f074807d4",
+    "supplementary/pr-table4.csv": "c93055636453562eab85fb69e267b82400a0e25964a7205c4e9e7247621d5c0f",
+    "supplementary/verify_exact.py": "9dc96cab092853698c66b7df9505a7983d98d84cc53a0bcbe0e66547f7bb5b38",
+    "supplementary/verify_geometry.py": "71b6f8dfd263931586b29511311ea4df64b897ccfba8587129ed18c9d6feb775",
+    "supplementary/verify_myerson.py": "614cfcfe94a552f3f7a52b34457d0d54ab97549e9b2666e974bcf039c46c3fe5",
+    "supplementary/verify_source.py": "870bd3f73d4ddabfb1bd8fcc70b8685abed332b0a11fef85972f86963add4c32"
+  },
+  "software_license": "MIT",
+  "software_authors": [
+    "Keiichi Watanabe"
+  ],
+  "paper_authors": [
+    "Shoichi Inoue",
+    "Keiichi Watanabe"
+  ],
+  "repository_url": "https://github.com/keiichiw/polygon-area-profiles"
+}

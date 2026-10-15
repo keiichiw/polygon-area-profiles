@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata and also cite the accompanying paper."
+type: software
+title: "Polygon area profiles: verification code"
+authors:
+  - family-names: Watanabe
+    given-names: Keiichi
+abstract: "Exact finite matching and numerical area checks accompanying Rational Area Profiles of Regular Polygons Cut by Two Congruent Diagonals."
+license: MIT
+repository-code: "https://github.com/keiichiw/polygon-area-profiles"
