@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_manuscript_commit": "2e7dd580761ea150996e8fd577d80074e5e69153",
-  "release": null,
+  "release": "v1.0.0",
   "license_status": "MIT for Python code and software documentation; see README.md for scope",
   "citation_status": "confirmed: sole software author Keiichi Watanabe; paper authors Shoichi Inoue and Keiichi Watanabe",
   "source_files": {
@@ -61,5 +61,6 @@
     "Shoichi Inoue",
     "Keiichi Watanabe"
   ],
-  "repository_url": "https://github.com/keiichiw/polygon-area-profiles"
+  "repository_url": "https://github.com/keiichiw/polygon-area-profiles",
+  "date_released": "2026-10-15"
 }

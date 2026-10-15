@@ -8,3 +8,5 @@ authors:
 abstract: "Exact finite matching and numerical area checks accompanying Rational Area Profiles of Regular Polygons Cut by Two Congruent Diagonals."
 license: MIT
 repository-code: "https://github.com/keiichiw/polygon-area-profiles"
+version: 1.0.0
+date-released: "2026-10-15"
