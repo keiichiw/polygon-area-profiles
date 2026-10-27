@@ -1,0 +1,50 @@
+{
+  "description": "Separate processes for each n; indicative local measurements under concurrent verification load, not acceptance thresholds.",
+  "python": "3.14.3",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "source_sha256": {
+    "explore_cell_orbits.py": "cba8bd520002b0ce3dca16d28efbc63a95c5324a0e5887b56d25a8ef592d9848",
+    "cyclotomic.py": "fd9fae424b0f0cd9ca68bc9811d4c6389b36d7cab22e902a97b3c806e94f1c6b",
+    "explore_cells.py": "f3154a8a798c7206286ccc322d77dfce8de9fe079b99ab554eb7e69134bef02c"
+  },
+  "precision_digits": [
+    60,
+    120
+  ],
+  "peak_rss_scope": "process lifetime high-water mark",
+  "measurements": [
+    {
+      "n": 40,
+      "build_seconds": 0.16302654100582004,
+      "ordering_seconds": 0.18082262482494116,
+      "area_seconds": 0.4949844591319561,
+      "elapsed_seconds": 0.8388336249627173,
+      "peak_rss_bytes": 38502400
+    },
+    {
+      "n": 50,
+      "build_seconds": 0.34844933287240565,
+      "ordering_seconds": 0.32715116697363555,
+      "area_seconds": 1.4084893751423806,
+      "elapsed_seconds": 2.084089874988422,
+      "peak_rss_bytes": 48168960
+    },
+    {
+      "n": 60,
+      "build_seconds": 0.5511237080208957,
+      "ordering_seconds": 0.5225858329795301,
+      "area_seconds": 1.957012375118211,
+      "elapsed_seconds": 3.0307219161186367,
+      "peak_rss_bytes": 62685184
+    },
+    {
+      "n": 100,
+      "build_seconds": 5.498360249912366,
+      "ordering_seconds": 4.198793499963358,
+      "area_seconds": 20.405800541164353,
+      "elapsed_seconds": 30.102954291040078,
+      "peak_rss_bytes": 279314432
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "method": "exact coefficient-vector proportionality in Q(zeta_(2n))",
+  "n_min": 5,
+  "n_max": 100,
+  "configurations": 39200,
+  "rational_quotients": [
+    {
+      "n": 6,
+      "k": 1,
+      "m": 2,
+      "ratio": "a0/a1",
+      "value": "1/2"
+    },
+    {
+      "n": 6,
+      "k": 1,
+      "m": 2,
+      "ratio": "a0/a2",
+      "value": "1/13"
+    },
+    {
+      "n": 6,
+      "k": 1,
+      "m": 2,
+      "ratio": "a1/a2",
+      "value": "2/13"
+    }
+  ]
+}

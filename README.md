@@ -6,14 +6,20 @@ Polygons Cut by Two Congruent Diagonals*, by Shoichi Inoue and Keiichi Watanabe.
 
 ## Reproduce the calculations
 
-Python 3.9 or later is required. The three main checks use only the standard
+Python 3.9 or later is required. The verification checks use only the standard
 library; no package installation is needed. Run from this directory:
 
 ```sh
 python3 scripts/check_reproduction.py
+# Also reproduce the new full-range experiments (longer run):
+python3 scripts/check_reproduction.py --extended
 ```
 
-This runs the checks and compares their output with the recorded results. It
+The default runs the original three checks and the new arithmetic regression tests.
+`--extended` additionally reproduces exact relative-area checks through n=100
+and exploratory all-diagonal cells for every 3 <= n <= 100, with independent
+full-expansion comparisons through 30 and at 36,40. Each report is
+compared with its recorded result. Every invocation
 also checks the SHA-256 hashes in `manifest.json`. Individual commands are:
 
 ```sh
@@ -33,6 +39,11 @@ source citations, optional PDF transcription checking, and the scope of each che
 | `verify_myerson.py` | `tab:myerson`, `lem:S-one`, `lem:R-one` | Exact identities and finite matching for S=1 and R=1 |
 | `verify_exact.py` | `lem:T-one`, `app:finite-matching` | Four PR families and 65 sporadic rows |
 | `verify_geometry.py` | `prop:area-reduction`, `thm:profile`, `rem:Q2-geometry` | Area formulas, classified values, symmetry and reflection |
+| `verify_relative_areas.py` | `sec:open` | Exact rational quotients in 39,200 congruent-diagonal configurations |
+| `explore_cells.py` | `sec:open` | Exact cell areas with numerical planar ordering, checked at 60 and 120 digits |
+| `explore_cell_orbits.py` | `sec:all-diagonals` | Rotational quotient for every 3 <= n <= 100, exact weighted areas and two ordering precisions |
+| `verify_cell_orbits.py` | `sec:all-diagonals` | Complete exact area multiset and topology comparison against full expansion |
+| `verify_arithmetic.py` | `sec:open` | Arithmetic, dodecagon, area-formula and concurrency regression tests |
 | `verify_source.py` | PR Table 4 used in the appendix | Optional transcription comparison with a local source PDF |
 
 The exact checks assume the external classification theorems. They do not
@@ -59,7 +70,9 @@ python3 supplementary/verify_myerson.py --manuscript /path/to/private/main.tex
 `CITATION.cff` identifies **Keiichi Watanabe** as the sole software author.
 The accompanying paper is authored by **Shoichi Inoue and Keiichi Watanabe**.
 Please cite the software when using the code and also cite the paper for its
-mathematical results. A release DOI will be added after a Zenodo deposit.
+mathematical results. The original v1.0.0 is archived at https://doi.org/10.5281/zenodo.23399093.
+Version v1.1.0 adds the relative-area and all-diagonal cell experiments,
+including their recorded results and reproduction instructions.
 The repository is hosted at <https://github.com/keiichiw/polygon-area-profiles>.
 
 ## License and contributions
@@ -77,3 +90,16 @@ materials is granted here; retain their provenance and source citations.
 To update the payload, intentionally update the input data and expected
 outputs, rerun verification, and regenerate the manifest hashes after reviewing
 the changes. Do not silently update a published release.
+
+The n <= 100 cell extension uses rotational symmetry and standard-library exact
+polynomial arithmetic. Saved results and timings are in
+`supplementary/cell-orbit-results.json` and `supplementary/cell-orbit-benchmarks.json`.
+The earlier `cell-results.json` is retained. The extension remains exploratory
+because the planar ordering is numerical. For a resumable extended check:
+
+```sh
+python3 scripts/check_reproduction.py --extended --cell-checkpoint-dir checkpoints
+```
+
+Without the optional checkpoint flag, all selected experiments are recomputed.
+These experiments and the original verification programs are distributed together in v1.1.0.

@@ -136,3 +136,146 @@ separation statistics are in `numerical-results.json`.
 Numerical checks do not prove rationality or irrationality and do not replace
 the exact arguments. They neither classify cases with `n>80` nor establish the
 completeness of the external Poonen--Rubinstein theorem.
+
+
+## Relative-area and cell experiments (v1.1.0)
+
+These independently implemented additions support the manuscript's concluding
+remarks. They are not included in archived v1.0.0. They use only the Python 3.9+
+standard library and run offline:
+
+```sh
+python3 supplementary/verify_arithmetic.py
+python3 supplementary/verify_relative_areas.py
+python3 supplementary/explore_cells.py
+python3 scripts/check_reproduction.py --extended
+```
+
+`cyclotomic.py` represents Q(zeta_N) in the power basis modulo Phi_N using integer
+coefficient vectors with a common rational denominator. Polynomial Euclidean
+inversion, equality, intersections, shoelace areas and rationality tests are exact.
+It reuses the cyclotomic-polynomial construction in `verify_myerson.py`.
+
+`verify_relative_areas.py` constructs four areas directly from boundary vertices
+and the diagonal intersection in Q(zeta_(2n)). A quotient is rational exactly
+when the two reduced coefficient vectors are rationally proportional. The saved
+`relative-area-results.json` covers 39,200 configurations, 5 <= n <= 100.
+Only (n,k,m)=(6,1,2) has rational quotients a0/a1=1/2, a0/a2=1/13 and a1/a2=2/13.
+An optional `--n-max N` restricts or extends this finite computation.
+
+`explore_cells.py` builds the arrangement of every chord, including polygon
+sides and all diagonals (diameters included). Every alternating quadruple of
+vertices supplies an exact crossing; exact field equality merges concurrency.
+At n=3 the polygon is one cell. Distinct intersections on a chord and cyclic
+orders of incident edges are determined numerically using Decimal embeddings.
+Half-edge traversal then enumerates the faces. This numerical ordering is not
+interval-certified, so the computation remains exploratory even though each
+reported area and its rationality test are exact conditional on the arrangement.
+
+Both 60- and 120-digit orderings must yield identical face cycles and exact area
+vectors. Gaps at or below 10^(-(precision-20)) cause an error, except that
+components used to select an angular half-plane are treated as zero within
+that threshold. Connectivity, simple face boundaries, Euler characteristic 2,
+one exterior face of normalized signed area -1, positive bounded areas and
+an exact bounded-area sum of 1 are checked. These checks do not certify the
+numerical ordering or prove the conjecture for untested polygons.
+
+The saved `cell-results.json` records all n=3,...,26 and 30. Rational cells occur
+only for n=3,4,6, where every cell is rational (1, 4 and 24 cells respectively).
+For n=30 there are 21,480 cells, none with rational normalized area.
+`--n 5 12 30` selects particular polygons. Reports include exact rational-area
+histograms, graph counts, and hashes of canonical face cycles and exact area
+vectors. Progress goes to stderr, JSON reports to stdout.
+
+`verify_arithmetic.py` checks field inverses, conjugation, nonrational controls,
+zero-division failures, the two unequal-diagonal dodecagon areas, exhaustive
+reflection representatives in that dodecagon, agreement with independently
+evaluated trigonometric formulas, and small arrangements with concurrency.
+The existing n<=80 numerical profile check is separate from these experiments.
+
+
+## Extension to n <= 100 by rotational symmetry
+
+`explore_cell_orbits.py` uses the same exact cyclotomic arithmetic but stores a
+rotational quotient instead of expanding all intersections. Its saved report is
+`cell-orbit-results.json`; the earlier full-expansion `cell-results.json` remains
+as an independent reference. Run from an extracted Online Resource 1 root:
+
+```sh
+python3 supplementary/explore_cell_orbits.py --output cells.json --benchmark-output timings.json
+python3 supplementary/explore_cell_orbits.py --n 40 50 60 100 --checkpoint-dir checkpoints --output selected.json
+python3 supplementary/verify_cell_orbits.py
+```
+
+The default range is every integer 3 <= n <= 100, including cases already proved
+in Appendix B. `--checkpoint-dir` writes one completed n atomically; rerunning
+the same command reuses these records. A fingerprint of the algorithm, exact
+arithmetic, reference geometry and public helper sources rejects stale checkpoints.
+The output and benchmark files are written only after the selected run completes;
+completed checkpoints survive an interrupted run. Benchmark times and process
+peak RSS are separate from the deterministic mathematical reports. RSS uses bytes
+and is a process-lifetime high-water mark, so use a fresh process for each n when
+comparing individual memory requirements. Checkpoints and timings are optional.
+
+For four vertices, the four positive cyclic gaps sum to n. Keeping only the
+lexicographically smallest cyclic gap tuple selects one representative of each
+rotation orbit of crossing pairs, including configurations with a stabilizer.
+A nonzero intersection is assigned to the half-open angular sector [0,2*pi/n),
+and its canonical coordinate is reduced exactly in Q(zeta_n). The sector is
+checked independently at both precisions; near-boundary collinearity is tested
+by an exact wedge product. The fixed origin is handled separately. Original
+vertices form one orbit. No numerical closeness test merges exact points.
+
+Every chord is a rotation of (0,s), 1 <= s <= floor(n/2). Crossings are accumulated
+on these representative chords, with both endpoint choices for a diameter.
+The two precision runs order their cuts and incident edges independently.
+Directed edge orbits and a rotation offset determine a face walk. At the origin,
+the cyclic order includes every actual incident ray. A face's multiplicity is
+n divided by its stabilizer, computed from the repeated directed edge orbits in
+its closed boundary. This covers the fixed exterior face, the odd-n central
+cell, and the even-n fixed central vertex. Edge orbits must have size n.
+
+The polygon boundary cycle and connectivity of the quotient imply connectivity
+of the lifted graph. Weighted vertex, edge and face counts satisfy Euler's
+formula. Quotient face-cycle signatures, including rotation offsets, must agree at 60 and 120 digits. Areas are
+then computed exactly once per representative cell, since rotations preserve
+area. Every representative has positive real area, the exterior has signed area
+-1, and multiplicity-weighted bounded areas sum exactly to 1. Rationality and
+rational-area histograms are exact. As with full expansion, angular ordering is
+not interval-certified; this remains an exploratory computation.
+
+`verify_cell_orbits.py` compares against independent full expansion for every
+3 <= n <= 30 and also n=36,40. It checks vertex/edge/cell counts, rational-area
+histograms, and a hash of the complete exact area multiset, with orbit
+multiplicities. The recorded comparison is `cell-orbit-reference-results.json`.
+The original full-expansion reports are unchanged. Its face walk now visits
+directed edges once rather than repeatedly scanning the entire remaining set.
+Small-range comparisons and rotational-sector tests also run in the normal
+regression suite. `../scripts/check_reproduction.py --extended` additionally reproduces the
+full n <= 100 report and the full reference comparison.
+
+`cell-orbit-benchmarks.json` records indicative local measurements for n=40,50,60,100
+in separate processes, including the Python version and architecture. These
+measurements are not correctness tests or portable performance guarantees.
+
+The exact arithmetic also skips zero terms in conjugation, uses cyclic coefficient
+shifts for rotations, and folds products modulo x^n-1 before reduction modulo
+Phi_n. Dense products use exact integer Kronecker substitution with a checked
+signed-digit carry bound; sparse products retain direct convolution. Regression
+tests compare these operations with naive convolution and long division,
+including negative coefficients, 30-digit coefficients, and unreduced polynomials
+longer than 3n, through n=100. These changes preserve the field and its exact
+rationality test and require no additional libraries.
+
+For a resumable complete verification, use
+`python3 scripts/check_reproduction.py --extended --cell-checkpoint-dir checkpoints`.
+Without that optional flag, the checker recomputes every report from scratch.
+Fingerprint-matched checkpoints only replace the n <= 100 orbit calculation;
+all report comparisons, helper hashes, other experiments and regression tests
+still run. A fresh full n <= 100 computation is what produced the saved report.
+
+The completed report covers all 98 integers 3 <= n <= 100. Rational cells occur
+only at n=3,4,6. For n=100 it records 3,731,301 vertices, 7,561,800 edges and
+3,830,500 bounded cells, represented by 38,305 bounded-cell rotation orbits.
+The separately measured n=100 run took approximately 30 seconds and 279 MB peak
+RSS on the recorded machine; these are illustrative measurements, not bounds.

@@ -1,0 +1,318 @@
+{
+  "method": "exact cyclotomic intersections and areas; numerical planar ordering",
+  "certified_arrangement": false,
+  "ordering_precision_digits": [
+    60,
+    120
+  ],
+  "precision_results_agree": true,
+  "polygons": [
+    {
+      "n": 3,
+      "vertices": 3,
+      "edges": 3,
+      "cells": 1,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 1,
+      "rational_area_counts": {
+        "1": 1
+      },
+      "face_cycles_sha256": "c46970cbc856b6007afa8acf0c5a80abbb110eee6c4c59b708ecad34372468e7",
+      "cell_areas_sha256": "be5a8f7c642aece7373f23abd525e13f1d29dac2ceb456b27164ed4dacfa22cf"
+    },
+    {
+      "n": 4,
+      "vertices": 5,
+      "edges": 8,
+      "cells": 4,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 4,
+      "rational_area_counts": {
+        "1/4": 4
+      },
+      "face_cycles_sha256": "b46550f541877229534dbc9c7bba8609c56ad6470563ab304fa5fb2e7ef94188",
+      "cell_areas_sha256": "348405c53c978f17885a7abc1405b14b9c5cf17c21bbf994d1ceeb00a51986ab"
+    },
+    {
+      "n": 5,
+      "vertices": 10,
+      "edges": 20,
+      "cells": 11,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "76cca51c74063041788dc5783cd010e8f5dbace3f351e82d080c40b641f0c0fb",
+      "cell_areas_sha256": "072f87ad869c41fdd72b832c901f474a4012068d783417899fcdae19ad3df7bf"
+    },
+    {
+      "n": 6,
+      "vertices": 19,
+      "edges": 42,
+      "cells": 24,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 24,
+      "rational_area_counts": {
+        "1/18": 12,
+        "1/36": 12
+      },
+      "face_cycles_sha256": "e0961b4c09c8658f9fe8e3575db31a948492f76440b07a8977e530c97cc95d58",
+      "cell_areas_sha256": "4e821b31777203fab28abb5803c037c89211a162e0902de2274dc17a10a7cdf7"
+    },
+    {
+      "n": 7,
+      "vertices": 42,
+      "edges": 91,
+      "cells": 50,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "103e9d5e702a9b7e41a34f1f60060b814256a333a9c154e2e5f38bcd4e363ea3",
+      "cell_areas_sha256": "b51fc23368c42fb52022b25ad865279a57bfa56cc932e349a5a3c5ecbbbcf298"
+    },
+    {
+      "n": 8,
+      "vertices": 57,
+      "edges": 136,
+      "cells": 80,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "c3ca8e4449dd2314bb0a0ef4c00d0a0765351c3da7aaadf218dc2a770b5f6553",
+      "cell_areas_sha256": "b44866b5cbbf50e928c8530ec9f3556e3bdde5f534be92955cd39e6d8bd835e7"
+    },
+    {
+      "n": 9,
+      "vertices": 135,
+      "edges": 288,
+      "cells": 154,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "d68e8af55efc241947210fcbb716c35bf1006a1b7c17ca778836eea00954bd85",
+      "cell_areas_sha256": "d9735c026aef589be69a96606e61fc3563938da54412390e8335b2eff18893bc"
+    },
+    {
+      "n": 10,
+      "vertices": 171,
+      "edges": 390,
+      "cells": 220,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "3b163bf91f5f27181e41be93b61b83a5298071b2ea130091b6379142a79897da",
+      "cell_areas_sha256": "5cffc7308947991fc350ea3b454c0354168efff46983991f1753939f607f887d"
+    },
+    {
+      "n": 11,
+      "vertices": 341,
+      "edges": 715,
+      "cells": 375,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "a23adbaf21743122f42a9003873caa69f71f22cb3a0d780e0ff70aa78c22d58a",
+      "cell_areas_sha256": "becd6a049fa97a1687a2ac09da856604d8a957bbb980b886c6842cfab76475d1"
+    },
+    {
+      "n": 12,
+      "vertices": 313,
+      "edges": 756,
+      "cells": 444,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "726c4b852670998ef39e310044f546bd8221ac8a62f0ae6de005bf982f2d4818",
+      "cell_areas_sha256": "027a964b8c0adcb8fc5f7b5ba7d7bcbbcca4b0659dd5579af4f99c8d2109c06d"
+    },
+    {
+      "n": 13,
+      "vertices": 728,
+      "edges": 1508,
+      "cells": 781,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "68c4dc8abcd96d895f6f25d37c9da8b98a67e0d0698d5f8c1c56840820c5c19e",
+      "cell_areas_sha256": "b06a1a276572a67af46f6eac0ba40ba7441e936a8dce5b72c4a015a0f0937e65"
+    },
+    {
+      "n": 14,
+      "vertices": 771,
+      "edges": 1722,
+      "cells": 952,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "321820b83756815af9c9bd619ef69419f36709cc61aed3d5e2c906028e9e6b2d",
+      "cell_areas_sha256": "fa60271af0a03ff031c2d7b6ba8d959642a16f79e36f531ca673ae9b19d79955"
+    },
+    {
+      "n": 15,
+      "vertices": 1380,
+      "edges": 2835,
+      "cells": 1456,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "b60a4f0deee56aff4ebb0876b5a720625a8a483823c87c201f041c546c5f9e14",
+      "cell_areas_sha256": "5d28addc9bde4f6c56450a6f185bd2612dd246e67c3d199d9d35ae368c0497d9"
+    },
+    {
+      "n": 16,
+      "vertices": 1393,
+      "edges": 3088,
+      "cells": 1696,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "8d3910429d6560e79ade168655ded14eaf4dffd9d47a9dcb5e457609e140c797",
+      "cell_areas_sha256": "da6db5b1636dd64e85c59561a6c9414d4040951d789ea639e944c66f7de6445c"
+    },
+    {
+      "n": 17,
+      "vertices": 2397,
+      "edges": 4896,
+      "cells": 2500,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "6728d39622606cbed21a7bef45d16a373a0ebd4981a1209e9fc9cd1d8e5456ef",
+      "cell_areas_sha256": "529d07acd77cb5b8b227f24d0b30316d8fee838ade15159752ba2bb96d32c902"
+    },
+    {
+      "n": 18,
+      "vertices": 1855,
+      "edges": 4320,
+      "cells": 2466,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "76897a5187d0e729a734c76fe9dc8828223832ffd4e4a74123f6425215e3b1c9",
+      "cell_areas_sha256": "f40c262bfcb07b2d71ef8e799fe76388d25739a93a84adaa49536e310b18df2e"
+    },
+    {
+      "n": 19,
+      "vertices": 3895,
+      "edges": 7923,
+      "cells": 4029,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "e0798aec0fa670c992fa8a28bfaecb338ad796606e5cc3d5ea12e94950a34d34",
+      "cell_areas_sha256": "41f4109462178c74dd2402a913aba604fe0012c569ac4265eee7d2a609905150"
+    },
+    {
+      "n": 20,
+      "vertices": 3861,
+      "edges": 8360,
+      "cells": 4500,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "71d370ebc9c3c41e5ff245ffdaed9def54c2b72067821b184518771b3d7f1d40",
+      "cell_areas_sha256": "308f6f6caf7dcfc2a0e7cb898ac3c73f70ceaa998845380768b10590525f73f4"
+    },
+    {
+      "n": 21,
+      "vertices": 6006,
+      "edges": 12180,
+      "cells": 6175,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "de9ef2749892dc2751e9fa758d938e71a63b27a3fa4d27225a897bb388f56dfb",
+      "cell_areas_sha256": "673d59d38105abdd57687ed5b0de4a0d956ed4f09b8686745062f22d0ed29a68"
+    },
+    {
+      "n": 22,
+      "vertices": 5963,
+      "edges": 12782,
+      "cells": 6820,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "1d4c9d05765e09f8e4e40828c49183d883b393bb6a12cf5d391437bf8969ed50",
+      "cell_areas_sha256": "46d3005af30daeecf2f71bbdcada52d43e7e24e3d5ecb30155d0f22113baddff"
+    },
+    {
+      "n": 23,
+      "vertices": 8878,
+      "edges": 17963,
+      "cells": 9086,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "bc27fa56e5670944cd5d9aba277432ea7bfb466122afc54e1d647c02ce8c5bc9",
+      "cell_areas_sha256": "cca3e91079a5decb12a76012382d257faea0f4f1f2dfba9870c287073051ed99"
+    },
+    {
+      "n": 24,
+      "vertices": 7321,
+      "edges": 16344,
+      "cells": 9024,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "432e9f405fd9650c14ae8534378e1d2b3b9031daf4abe21bf68541e252c097da",
+      "cell_areas_sha256": "ddf0b85039d7482d883d543fbc08c359412f1e30b96a4697f341f874cd086c57"
+    },
+    {
+      "n": 25,
+      "vertices": 12675,
+      "edges": 25600,
+      "cells": 12926,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "21154b4334ba1e1197bdb132dce12e1aa0b443575a8ed378f042a5e808780a39",
+      "cell_areas_sha256": "d6eb7f06cb5fa1893b6441605f3488957272d8797187b73730417ff9e9a29a20"
+    },
+    {
+      "n": 26,
+      "vertices": 12507,
+      "edges": 26494,
+      "cells": 13988,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "67b152fa557aef1a3dda43d07ad9f431b830006dca0f6666563e30dc06096023",
+      "cell_areas_sha256": "de3304b61e72a81bd7f1d076d995b89b98488d7841007ffea036f4757846dacc"
+    },
+    {
+      "n": 30,
+      "vertices": 16831,
+      "edges": 38310,
+      "cells": 21480,
+      "euler_characteristic": 2,
+      "exact_area_sum": "1",
+      "rational_cells": 0,
+      "rational_area_counts": {},
+      "face_cycles_sha256": "25198381b8eec4fa04caecf7001bf65b839954f796561679d4c4cbccf038542a",
+      "cell_areas_sha256": "8bfe197fef37525f898b5be30c4b05be6b4b8c068355be84a037c3e3bb471961"
+    }
+  ]
+}

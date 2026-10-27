@@ -1,7 +1,6 @@
 {
   "schema_version": 1,
   "source_manuscript_commit": "2e7dd580761ea150996e8fd577d80074e5e69153",
-  "release": "v1.0.0",
   "license_status": "MIT for Python code and software documentation; see README.md for scope",
   "citation_status": "confirmed: sole software author Keiichi Watanabe; paper authors Shoichi Inoue and Keiichi Watanabe",
   "source_files": {
@@ -43,7 +42,7 @@
     }
   },
   "payload_sha256": {
-    "supplementary/README.md": "a162a3fe5b810216d637a3f3acf5582f6401e6ca1dc86453ff503c72d3eba218",
+    "supplementary/README.md": "d5e8e481f877c293aab9703985b28f002e1d84abb70a82cacd454168cbf03b28",
     "supplementary/exact-results.json": "2061c85ebd78468115bd855f2eb5ec6d43538e5147a7f00371bab5d0bf32ebdf",
     "supplementary/myerson-results.txt": "68ebb82b65934f73249f35c8636c6d9bb7e10283109d57778661e187d70690b0",
     "supplementary/numerical-results.json": "e44459e25c7ff7b390d85a36f23a6bc00b68d6790943153189ef722f074807d4",
@@ -51,7 +50,19 @@
     "supplementary/verify_exact.py": "9dc96cab092853698c66b7df9505a7983d98d84cc53a0bcbe0e66547f7bb5b38",
     "supplementary/verify_geometry.py": "71b6f8dfd263931586b29511311ea4df64b897ccfba8587129ed18c9d6feb775",
     "supplementary/verify_myerson.py": "614cfcfe94a552f3f7a52b34457d0d54ab97549e9b2666e974bcf039c46c3fe5",
-    "supplementary/verify_source.py": "870bd3f73d4ddabfb1bd8fcc70b8685abed332b0a11fef85972f86963add4c32"
+    "supplementary/verify_source.py": "870bd3f73d4ddabfb1bd8fcc70b8685abed332b0a11fef85972f86963add4c32",
+    "scripts/check_reproduction.py": "a1f9bd75e6098396cbff04528586c66e123682a6d8a1bb8b1c2500ce5ead049b",
+    "supplementary/cell-results.json": "d529f1ecf44bea47a67418d655ceb63d88cc1b378d5af099af0c8ed4d74db97d",
+    "supplementary/cyclotomic.py": "fd9fae424b0f0cd9ca68bc9811d4c6389b36d7cab22e902a97b3c806e94f1c6b",
+    "supplementary/explore_cells.py": "f3154a8a798c7206286ccc322d77dfce8de9fe079b99ab554eb7e69134bef02c",
+    "supplementary/relative-area-results.json": "09c29b1632cba13371da7efd790db111a7d9d97e2c23a7108a8fb05f5751444b",
+    "supplementary/verify_arithmetic.py": "137653f82c5860991e66aa8c23d0cbab728307710a6717595fe1b112ad7c1927",
+    "supplementary/verify_relative_areas.py": "f269826b661349ac0d7a28e537f2ebbf0da3104f930103fbe9d4843c4fb823f3",
+    "supplementary/explore_cell_orbits.py": "cba8bd520002b0ce3dca16d28efbc63a95c5324a0e5887b56d25a8ef592d9848",
+    "supplementary/verify_cell_orbits.py": "71094e0f87192d76a905c18408a2f307ee57692b89c57f429015035645edd357",
+    "supplementary/cell-orbit-results.json": "9bdda5631e4698c0a116bb64fb47704397c14f66f55ec7d3da56f972882c1702",
+    "supplementary/cell-orbit-reference-results.json": "1972034a5603420ae34c97a9287e36a295a817265bf74d9f751ab51dac6a915e",
+    "supplementary/cell-orbit-benchmarks.json": "07a6d91e32276cc8e3b354de628d5d5993fae7152f0d6b450a8cffadfb28d57f"
   },
   "software_license": "MIT",
   "software_authors": [
@@ -62,5 +73,19 @@
     "Keiichi Watanabe"
   ],
   "repository_url": "https://github.com/keiichiw/polygon-area-profiles",
-  "date_released": "2026-10-15"
+  "release_status": "v1.1.0",
+  "new_experiment_provenance": {
+    "implementation": "independent implementation from the manuscript extension specification",
+    "date": "2026-10-22",
+    "source_zip_used": false
+  },
+  "base_release": "v1.0.0",
+  "base_date_released": "2026-10-15",
+  "cell_orbit_extension": {
+    "date": "2026-10-23",
+    "range": "every integer 3 <= n <= 100",
+    "status": "included in v1.1.0"
+  },
+  "version": "1.1.0",
+  "date_released": "2026-10-27"
 }
